@@ -63,4 +63,4 @@ async function getBackgroundImg(){
         bg = "sunrise1.png";
     }
 backgroundImg = loadImage(bg);
-} 
+}
