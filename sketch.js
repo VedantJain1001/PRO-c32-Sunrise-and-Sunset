@@ -23,8 +23,7 @@ function draw(){
     }
 
     Engine.update(engine);
-    textSize(20)
-    text("Time: " + hour, width -300, 50)
+    
 }
 async function getBackgroundImg(){
     var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
@@ -34,7 +33,8 @@ async function getBackgroundImg(){
 
     var datetime = responseJSON.datetime;
     var hour = datetime.slice(11,13);
-
+    textSize(20)
+    text("Time: " + hour, width -300, 50)
     if(hour>=04 && hour<=06){
         bg = "sunrise1.png";
     }else if(hour>=06 && hour<=08){
